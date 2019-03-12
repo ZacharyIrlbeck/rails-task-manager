@@ -1,0 +1,6 @@
+<h1> <%= @task.title %><h1>
+<p> <%= @task.details %></p>
+<%= link_to 'Go back', '/tasks' %>
+<%= link_to 'Delete', "/tasks/#{@task.id}", method: :delete, data: { confirm: "sure?"} %>
+<%= link_to 'Edit', "/tasks/#{@task.id}/edit" %>
+<%= link_to 'Toggle complete', "#{@task.id}/toggle_done" %>

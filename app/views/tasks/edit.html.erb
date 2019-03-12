@@ -1,0 +1,24 @@
+<h1>Make Changes</h1>
+
+ <li><%= @task.title %></li>
+ <li><%= @task.details %></li>
+<li><%= @task.id %></li>
+
+ <%= form_for(@task) do |f| %>
+  action = task_path(@task) => /tasks/3
+   <div class="form-group">
+     <%= f.label :title %>
+     <%= f.text_field :title, class: 'form-control' %>
+   </div>
+
+   <div class="form-group">
+     <%= f.label :details %>
+     <%= f.text_field :details, class: 'form-control' %>
+   </div>
+
+   <div class="form-group">
+     <%= f.submit class: 'btn btn-primary' %>
+   </div>
+
+<% end %>
+
